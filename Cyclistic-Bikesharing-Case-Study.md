@@ -643,9 +643,10 @@ print(monthly_usercount, n=24)
 ggplot(all_trips_v2, aes(x = month, fill = member_casual)) +
   geom_bar(position = "dodge") +
   ggtitle('Monthly Trends by User Type', subtitle = "April 2020 - March 2021") + 
-  theme(plot.title = element_text(hjust = 0.5), plot.subtitle = element_text(hjust = 0.5)) +    
+  theme(plot.title = element_text(hjust = 0.5), plot.subtitle = element_text(hjust = 0.5), plot.caption = element_text(hjust = 0.5)) +  
   xlab('Month') +   ylab('Ride Count') + 
   labs(fill='User Type') +
+  labs(caption = "NOTE: Months represented in MM format") +
   scale_y_continuous(labels = scales::comma) +
   scale_fill_manual(values = c("#99cad5", "#3f93a2"),
                      labels = c("casual","member"))
@@ -696,7 +697,7 @@ print(avg_duration, n=24)
 
 ``` r
 ggplot(avg_duration, aes(x = month, y = average_duration, fill = member_casual)) +
-geom_col(position = "dodge") + ggtitle('Average Ride Duration by User Type and Month', subtitle = "April 2020 - March 2021") + theme(plot.title = element_text(hjust = 0.5), plot.subtitle = element_text(hjust = 0.5), plot.caption = element_text(hjust = 0.5)) + xlab('Month') + ylab('Ride Duration (sec)') + labs(fill='User Type') + labs(caption = "NOTE: 1000 sec = 16.6667 min") + scale_y_continuous(labels = scales::comma) +
+geom_col(position = "dodge") + ggtitle('Average Ride Duration by User Type and Month', subtitle = "April 2020 - March 2021") + theme(plot.title = element_text(hjust = 0.5), plot.subtitle = element_text(hjust = 0.5), plot.caption = element_text(hjust = 0.5)) + xlab('Month') + ylab('Ride Duration (sec)') + labs(fill='User Type') + labs(caption = "NOTE: 1000 sec = 16.6667 min | Months represented in MM format") + scale_y_continuous(labels = scales::comma) +
     scale_fill_manual(values = c("#99cad5", "#3f93a2"),
                      labels = c("casual","member"))
 ```
@@ -1026,7 +1027,7 @@ ggplot(data = pop_stations_casual, aes(x = start_station_name, y = n)) +
   geom_bar(stat = "identity", fill="#99cad5", colour="black") +
   ggtitle('Top 10 Start Stations - Casuals', subtitle = "April 2020 - March 2021") + 
   theme(plot.title = element_text(hjust = 0.5), plot.subtitle = element_text(hjust = 0.5)) +    
-  xlab('Ride Count') + ylab('Station Name') + 
+  xlab('Station Name') + ylab('Ride Count') + 
   coord_flip( )
 ```
 
@@ -1063,7 +1064,7 @@ ggplot(data = pop_stations_member, aes(x = start_station_name, y = n)) +
   geom_bar(stat = "identity", fill="#3f93a2", colour="black") +
   ggtitle('Top 10 Start Stations - Members', subtitle = "April 2020 - March 2021") + 
   theme(plot.title = element_text(hjust = 0.5), plot.subtitle = element_text(hjust = 0.5)) +    
-  xlab('Ride Count') + ylab('Station Name') + 
+  xlab('Station Name') + ylab('Ride Count') + 
   coord_flip( )
 ```
 
@@ -1100,7 +1101,7 @@ ggplot(data = end_stations_casual, aes(x = end_station_name, y = n)) +
   geom_bar(stat = "identity", fill="#99cad5", colour="black") +
   ggtitle('Top 10 End Stations - Casuals', subtitle = "April 2020 - March 2021") + 
   theme(plot.title = element_text(hjust = 0.5), plot.subtitle = element_text(hjust = 0.5)) +    
-  xlab('Ride Count') + ylab('Station Name') + 
+  xlab('Station Name') + ylab('Ride Count') + 
   coord_flip( )
 ```
 
@@ -1137,7 +1138,7 @@ ggplot(data = end_stations_member, aes(x = end_station_name, y = n)) +
   geom_bar(stat = "identity", fill="#3f93a2", colour="black") +
   ggtitle('Top 10 End Stations - Members', subtitle = "April 2020 - March 2021") + 
   theme(plot.title = element_text(hjust = 0.5), plot.subtitle = element_text(hjust = 0.5)) +    
-  xlab('Ride Count') + ylab('Station Name') + 
+  xlab('Station Name') + ylab('Ride Count') + 
   coord_flip( )
 ```
 
