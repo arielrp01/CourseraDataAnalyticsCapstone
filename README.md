@@ -30,7 +30,7 @@ Cyclistic's data archive is available at https://divvy-tripdata.s3.amazonaws.com
 
 This project used data from April 2020 to March 2021. 
 
-### Instructions
+### Assignment Requirements
 Via [Coursera](https://d18ky98rnyall9.cloudfront.net/aacF81H_TsWnBfNR_x7FIg_36299b28fa0c4a5aba836111daad12f1_DAC8-Case-Study-1.pdf?Expires=1638316800&Signature=Zqi~doZetbwqgvo-w6Gi1DImvh7F3yvHeK8ffLTQbarDYrR3r-NQYCI6bx5EigUtldhbES3EinKEiPMSFwwcZoAVrcKhwm9P9odZtzZDwsYw8TkP~uK0R1MPWRm9~8EfCFNMSoTJK0pvB3QmA2fNN89BP2BiVMKzQwHSRHC-V8I_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A) 
 > You will use Cyclistic’s historical trip data to analyze and identify trends. Download the previous 12 months of Cyclistic trip data [here](https://divvy-tripdata.s3.amazonaws.com/index.html). (Note: The datasets have a different name because Cyclistic is a fictional company. For the purposes of this case study, the datasets are appropriate and will enable you to answer the business questions. The data has been made available by Motivate International Inc. under this license.) This is public data that you can use to explore how different customer types are using Cyclistic bikes. But note that data-privacy issues prohibit you from using riders’ personally identifiable information. This means that you won’t be able to connect pass purchases to credit card numbers to determine if casual riders live in the Cyclistic service area or if they have purchased multiple single passes.
 
